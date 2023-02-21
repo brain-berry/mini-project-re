@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Subah Info Solutions</title>
+</head>
+<body>
+    <div id="myqrModal" class="modal">
+
+        <!-- Modal1 content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="page-content">
+                  <div class="form-content">
+                        <form class="form1">
+                            <input type="hidden" name="_id">
+                            <h3 class="header">Add Student Details</h3>
+                            <p>
+                                <input type="text" name="name" id="name" placeholder="Full name" class="modal-body-input">
+                            </p>
+                            <p>
+                                <input type="text" name="studID" id="studID" placeholder="Student ID" class="modal-body-input">
+                            </p>
+                            <p>
+                                <input type="text" name="email" id="email" placeholder="Email" class="modal-body-input">
+                            </p>
+                            <p>
+                                <input type="text" name="phone" id="phone" placeholder="Phone number" class="modal-body-input">
+                            </p>
+                            <p>
+                                <input type="submit" class="modal-submit" id="add-data" value="Save Details">
+                            </p>
+                        </form>
+                  </div>
+              </div>
+        </div>
+      
+    </div>
+
+
+    <div class="container">
+        <h2 class="header">Subah Info Solutions</h2>
+        </div>
+        <div class="info-container">
+            <h3 class="header">Student Details</h3>
+            <% for(var i=0; i < studData.length; i++){ %>
+            <div class="details">
+                <p><strong>Student Name: </strong> <%= studData[i].studentName %></p> 
+                <p><strong>Student ID: </strong> <%= studData[i].studentID %></p> 
+                <p><strong>Email: </strong> <%= studData[i].email %></p> 
+                <p><strong>Phone Number: </strong> <%= studData[i].phone %></p> 
+            </div>
+            <% } %>
+        </div>
+    </div>
+
+    <script src="jquery-3.6.0.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
